@@ -1,0 +1,9 @@
+    public static void main(String[] arg) throws IOException {
+        File input = new File("D:\\tmp\\image.jpg");
+        BufferedImage image = ImageIO.read(input);
+
+        BufferedImage resized = resize(image, 200, 500);
+
+        File output = new File("D:\\tmp\\image-200x500.png");
+        ImageIO.write(resized, "png", output);
+    }
